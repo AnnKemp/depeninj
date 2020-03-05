@@ -6,10 +6,20 @@ namespace App\Entity;
 
 class Master
 {
-    private $thetext;
-    $name="dit is een proeftekst"; // hoe moet ik die tekst hier hardcoded insteken?
+    /**
+     * @var Transform
+     */
+
+    private $name;
+    //$name="dit is een proeftekst"; // hoe moet ik die tekst hier hardcoded insteken?
 
     public function __construct(Transform $name) {
+        
+    $this->name=$name;
+    //dit is een proeftekst"$name="dit is een proeftekst";
+
+       // if(!isset($name)){ $name="dit is een proeftekst"; }
+
         $this->thetext = $this->transform; // eigenlijk moet ik die transform functie aanroepen die door
         // beide classen gebruikt wordt en een waarde returnt
 
